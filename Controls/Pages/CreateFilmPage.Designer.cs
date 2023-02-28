@@ -34,6 +34,8 @@
             buttonBack = new components.CustomButton();
             panel2 = new Panel();
             panel26 = new Panel();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            customButton2 = new components.CustomButton();
             panel23 = new Panel();
             panel24 = new Panel();
             textBox2 = new TextBox();
@@ -73,6 +75,8 @@
             panel5.SuspendLayout();
             panel7.SuspendLayout();
             panel2.SuspendLayout();
+            panel26.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             panel23.SuspendLayout();
             panel24.SuspendLayout();
             panel20.SuspendLayout();
@@ -147,11 +151,43 @@
             // 
             // panel26
             // 
+            panel26.Controls.Add(tableLayoutPanel1);
             panel26.Dock = DockStyle.Top;
-            panel26.Location = new Point(0, 490);
+            panel26.Location = new Point(0, 399);
             panel26.Name = "panel26";
-            panel26.Size = new Size(666, 100);
+            panel26.Size = new Size(666, 49);
             panel26.TabIndex = 10;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 3;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Controls.Add(customButton2, 1, 0);
+            tableLayoutPanel1.Dock = DockStyle.Left;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.Padding = new Padding(0, 10, 0, 0);
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Size = new Size(558, 49);
+            tableLayoutPanel1.TabIndex = 11;
+            // 
+            // customButton2
+            // 
+            customButton2.AutoSize = true;
+            customButton2.BackColor = Color.White;
+            customButton2.FlatAppearance.BorderSize = 0;
+            customButton2.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            customButton2.ForeColor = Color.Black;
+            customButton2.IsActivated = false;
+            customButton2.Location = new Point(218, 13);
+            customButton2.Name = "customButton2";
+            customButton2.Size = new Size(121, 28);
+            customButton2.TabIndex = 0;
+            customButton2.Text = "Save";
+            customButton2.UseVisualStyleBackColor = false;
             // 
             // panel23
             // 
@@ -160,15 +196,15 @@
             panel23.Dock = DockStyle.Top;
             panel23.Location = new Point(0, 0);
             panel23.Name = "panel23";
-            panel23.Size = new Size(666, 490);
+            panel23.Size = new Size(666, 399);
             panel23.TabIndex = 9;
             // 
             // panel24
             // 
             panel24.Controls.Add(textBox2);
             panel24.Controls.Add(label4);
-            panel24.Dock = DockStyle.Fill;
-            panel24.Location = new Point(0, 311);
+            panel24.Dock = DockStyle.Top;
+            panel24.Location = new Point(0, 216);
             panel24.Name = "panel24";
             panel24.Size = new Size(666, 179);
             panel24.TabIndex = 9;
@@ -209,7 +245,7 @@
             panel20.Dock = DockStyle.Top;
             panel20.Location = new Point(0, 0);
             panel20.Name = "panel20";
-            panel20.Size = new Size(666, 311);
+            panel20.Size = new Size(666, 216);
             panel20.TabIndex = 8;
             // 
             // panel18
@@ -257,11 +293,10 @@
             label7.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label7.Location = new Point(0, 0);
             label7.Name = "label7";
-            label7.Padding = new Padding(0, 0, 5, 0);
+            label7.Padding = new Padding(20, 0, 5, 0);
             label7.Size = new Size(158, 35);
             label7.TabIndex = 0;
             label7.Text = "Age rating";
-            label7.TextAlign = ContentAlignment.TopRight;
             // 
             // panel15
             // 
@@ -309,11 +344,10 @@
             label6.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label6.Location = new Point(0, 0);
             label6.Name = "label6";
-            label6.Padding = new Padding(0, 0, 5, 0);
+            label6.Padding = new Padding(20, 0, 5, 0);
             label6.Size = new Size(158, 35);
             label6.TabIndex = 0;
             label6.Text = "Release date";
-            label6.TextAlign = ContentAlignment.TopRight;
             // 
             // panel3
             // 
@@ -360,11 +394,10 @@
             label1.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Padding = new Padding(0, 0, 5, 0);
+            label1.Padding = new Padding(20, 0, 5, 0);
             label1.Size = new Size(158, 35);
             label1.TabIndex = 0;
             label1.Text = "Genre";
-            label1.TextAlign = ContentAlignment.TopRight;
             // 
             // panel8
             // 
@@ -424,11 +457,10 @@
             label2.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(0, 0);
             label2.Name = "label2";
-            label2.Padding = new Padding(0, 0, 5, 0);
+            label2.Padding = new Padding(20, 0, 5, 0);
             label2.Size = new Size(158, 35);
             label2.TabIndex = 0;
             label2.Text = "Title";
-            label2.TextAlign = ContentAlignment.TopRight;
             // 
             // panel12
             // 
@@ -476,11 +508,10 @@
             label5.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label5.Location = new Point(0, 0);
             label5.Name = "label5";
-            label5.Padding = new Padding(0, 0, 5, 0);
+            label5.Padding = new Padding(20, 0, 5, 0);
             label5.Size = new Size(158, 35);
             label5.TabIndex = 0;
             label5.Text = "Film kodename";
-            label5.TextAlign = ContentAlignment.TopRight;
             // 
             // panel21
             // 
@@ -489,7 +520,7 @@
             panel21.Dock = DockStyle.Left;
             panel21.Location = new Point(0, 0);
             panel21.Name = "panel21";
-            panel21.Size = new Size(200, 311);
+            panel21.Size = new Size(200, 216);
             panel21.TabIndex = 9;
             // 
             // pictureBox2
@@ -498,7 +529,7 @@
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(0, 0);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(200, 270);
+            pictureBox2.Size = new Size(200, 175);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
@@ -507,7 +538,7 @@
             // 
             panel22.Controls.Add(customButton1);
             panel22.Dock = DockStyle.Bottom;
-            panel22.Location = new Point(0, 270);
+            panel22.Location = new Point(0, 175);
             panel22.Name = "panel22";
             panel22.Size = new Size(200, 41);
             panel22.TabIndex = 2;
@@ -552,6 +583,9 @@
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
             panel2.ResumeLayout(false);
+            panel26.ResumeLayout(false);
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
             panel23.ResumeLayout(false);
             panel24.ResumeLayout(false);
             panel24.PerformLayout();
@@ -625,5 +659,7 @@
         private Panel panel25;
         private components.Label label7;
         private Panel panel26;
+        private TableLayoutPanel tableLayoutPanel1;
+        private components.CustomButton customButton2;
     }
 }

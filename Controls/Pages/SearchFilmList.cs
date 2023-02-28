@@ -16,6 +16,7 @@ namespace CPProject.Controls
 
         private void SearchFilmList_Load(object sender, EventArgs e)
         {
+            createButtonShower(AuthorizationState.Instance.UsersType);
             AuthorizationState.Instance.subscribeOnChange((EUsersType s) =>
             {
                 createButtonShower(s);
