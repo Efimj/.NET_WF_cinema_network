@@ -26,45 +26,27 @@ namespace CPProject.Controls.Pages
 
         private void FilmPage_Load(object sender, EventArgs e)
         {
+            panelNoReviews.Visible = false;
             editPanelVisibleSetMode(AuthorizationState.Instance.UsersType);
             AuthorizationState.Instance.subscribeOnChange((EUsersType s) =>
             {
                 editPanelVisibleSetMode(s);
             });
-            //CustomButton btn = new CustomButton();
-            //btn.Text = "By ticket";
-            //btn.Dock = DockStyle.Fill;
-            //btn.Click += (object sender, EventArgs e) =>
-            //{
-            //    panelByTicket.Controls.Clear();
-            //    components.Label ls = new components.Label();
-            //    ls.Text = "no tickets";
-            //    ls.Dock = DockStyle.Fill;
-            //    ls.Font = new Font("Arial", 12);
-            //    ls.TextAlign = ContentAlignment.MiddleCenter;
-            //    panelByTicket.Controls.Add(ls);
-            //};
-            //panelByTicket.Controls.Add(btn);
-
-            //for (int i = 0; i < 30; i++)
-            //{
-            //    flowLayoutPanelReviews.Controls.Add(new UserReviewItem());
-            //}
-            //CustomButton btn2 = new CustomButton();
-            //btn2.Text = "Make review";
-            //btn2.Dock = DockStyle.Fill;
-            //panelReviewCreate.Controls.Add(btn2);
+            for (int i = 0; i < 30; i++)
+            {
+                flowLayoutPanelReviews.Controls.Add(new UserReviewItem());
+            }
         }
 
         private void editPanelVisibleSetMode(EUsersType s)
         {
             if (s == EUsersType.Administrator)
             {
-                panelFilmEdit.Visible = true;
+                buttonEditFilm.Visible = true;
             }
             else
             {
-                panelFilmEdit.Visible = false;
+                buttonEditFilm.Visible = false;
             }
         }
 
