@@ -30,9 +30,9 @@
         {
             label1 = new Label();
             panel1 = new Panel();
-            label2 = new Label();
             label3 = new Label();
             textBox2 = new TextBox();
+            ratingControl1 = new ui.RatingControl();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -43,31 +43,20 @@
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
             label1.Padding = new Padding(12, 0, 0, 0);
-            label1.Size = new Size(545, 37);
+            label1.Size = new Size(513, 37);
             label1.TabIndex = 0;
             label1.Text = "Username";
             label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // panel1
             // 
-            panel1.Controls.Add(label2);
+            panel1.Controls.Add(ratingControl1);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(5, 2);
             panel1.Name = "panel1";
             panel1.Size = new Size(649, 37);
             panel1.TabIndex = 1;
-            // 
-            // label2
-            // 
-            label2.Dock = DockStyle.Fill;
-            label2.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(545, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(104, 37);
-            label2.TabIndex = 1;
-            label2.Text = "4.5/5";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -97,6 +86,18 @@
             textBox2.TabIndex = 14;
             textBox2.Text = "Review description";
             // 
+            // ratingControl1
+            // 
+            ratingControl1.BackColor = Color.White;
+            ratingControl1.CurrentReting = null;
+            ratingControl1.Dock = DockStyle.Fill;
+            ratingControl1.Editable = false;
+            ratingControl1.Location = new Point(513, 0);
+            ratingControl1.Margin = new Padding(0);
+            ratingControl1.Name = "ratingControl1";
+            ratingControl1.Size = new Size(136, 37);
+            ratingControl1.TabIndex = 1;
+            // 
             // UserReviewItem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -118,8 +119,8 @@
 
         private Label label1;
         private Panel panel1;
-        private Label label2;
         private Label label3;
         private TextBox textBox2;
+        private ui.RatingControl ratingControl1;
     }
 }

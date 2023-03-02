@@ -21,6 +21,8 @@ namespace CPProject.Controls.Pages
 
         private void FutureSessionPage_Load(object sender, EventArgs e)
         {
+
+
             customDataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             customDataGridView1.RowTemplate.Height = 50;
             for (int i = 0; i < 5; i++)
@@ -51,6 +53,23 @@ namespace CPProject.Controls.Pages
                 );
             }
 
+        }
+
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            CreateSessionPage createSessionPage = new CreateSessionPage();
+            setNewPage(createSessionPage);
+        }
+
+        private void setNewPage(UserControl page)
+        {
+            this.Hide();
+            Panel? parentPanel = (Panel?)this.Parent;
+            if (parentPanel != null)
+            {
+                CreateReview createFilmPage = new CreateReview();
+                parentPanel.Controls.Add(page);
+            }
         }
     }
 }

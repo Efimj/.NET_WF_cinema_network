@@ -1,4 +1,6 @@
-﻿namespace CPProject.components
+﻿using CPProject.components.ui;
+
+namespace CPProject.components
 {
     public partial class FilmCard : UserControl
     {
@@ -28,15 +30,15 @@
                 labelFilmDescription = value;
             }
         }
-        public System.Windows.Forms.Label FilmRatingLable
+        public RatingControl FilmRatingControl
         {
             get
             {
-                return labelFilmRaiting;
+                return ratingControl1;
             }
             set
             {
-                labelFilmRaiting = value;
+                ratingControl1 = value;
             }
         }
         public PictureBox FilmPoster

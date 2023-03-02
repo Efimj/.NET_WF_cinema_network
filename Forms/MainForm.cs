@@ -10,8 +10,8 @@ namespace CPProject
         {
             InitializeComponent();
             panelContainerNavBar.Controls.Add(new NBAuthorization(panelMainFormLayout));
-            BackColor = ColorPalette.Orange;
-            panelMainFormLayout.BackColor = ColorPalette.Orange;
+            BackColor = Color.White;
+            panelMainFormLayout.BackColor = Color.White;
             AuthorizationState.Instance.subscribeOnChange((EUsersType s) =>
             {
                 new MainFormLayoutHandlers().OnAuthorization(panelContainerNavBar, panelMainFormLayout);

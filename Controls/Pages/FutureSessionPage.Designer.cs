@@ -35,6 +35,7 @@
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             panelHeader = new Panel();
+            customButton1 = new components.CustomButton();
             label1 = new components.Label();
             customComboBox1 = new components.CustomComboBox();
             panel1 = new Panel();
@@ -55,6 +56,7 @@
             // panelHeader
             // 
             panelHeader.BackColor = Color.White;
+            panelHeader.Controls.Add(customButton1);
             panelHeader.Controls.Add(label1);
             panelHeader.Controls.Add(customComboBox1);
             panelHeader.Controls.Add(panel1);
@@ -64,6 +66,22 @@
             panelHeader.Name = "panelHeader";
             panelHeader.Size = new Size(931, 55);
             panelHeader.TabIndex = 4;
+            // 
+            // customButton1
+            // 
+            customButton1.AutoSize = true;
+            customButton1.BackColor = Color.White;
+            customButton1.FlatAppearance.BorderSize = 0;
+            customButton1.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            customButton1.ForeColor = Color.Black;
+            customButton1.IsActivated = false;
+            customButton1.Location = new Point(735, 13);
+            customButton1.Name = "customButton1";
+            customButton1.Size = new Size(124, 29);
+            customButton1.TabIndex = 6;
+            customButton1.Text = "Create session";
+            customButton1.UseVisualStyleBackColor = false;
+            customButton1.Click += customButton1_Click;
             // 
             // label1
             // 
@@ -246,5 +264,6 @@
         private DataGridViewTextBoxColumn address;
         private DataGridViewTextBoxColumn countTickets;
         private DataGridViewTextBoxColumn ticketPrice;
+        private components.CustomButton customButton1;
     }
 }

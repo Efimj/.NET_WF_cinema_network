@@ -47,6 +47,9 @@
             panel2 = new Panel();
             panel3 = new Panel();
             panel9 = new Panel();
+            label3 = new components.Label();
+            ratingControl1 = new components.ui.RatingControl();
+            panel12 = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel23 = new Panel();
             customButton2 = new components.CustomButton();
@@ -62,7 +65,6 @@
             label7 = new components.Label();
             panel11 = new Panel();
             label1 = new components.Label();
-            label3 = new components.Label();
             panel8 = new Panel();
             pictureBox1 = new PictureBox();
             panel7 = new Panel();
@@ -104,8 +106,8 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Padding = new Padding(15);
-            panel1.Size = new Size(688, 680);
+            panel1.Padding = new Padding(15, 15, 0, 0);
+            panel1.Size = new Size(688, 665);
             panel1.TabIndex = 11;
             // 
             // panel4
@@ -118,7 +120,7 @@
             panel4.Dock = DockStyle.Top;
             panel4.Location = new Point(15, 516);
             panel4.Name = "panel4";
-            panel4.Size = new Size(658, 149);
+            panel4.Size = new Size(673, 149);
             panel4.TabIndex = 2;
             // 
             // flowLayoutPanelReviews
@@ -128,7 +130,7 @@
             flowLayoutPanelReviews.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanelReviews.Location = new Point(0, 149);
             flowLayoutPanelReviews.Name = "flowLayoutPanelReviews";
-            flowLayoutPanelReviews.Size = new Size(658, 0);
+            flowLayoutPanelReviews.Size = new Size(673, 0);
             flowLayoutPanelReviews.TabIndex = 5;
             flowLayoutPanelReviews.WrapContents = false;
             // 
@@ -139,7 +141,7 @@
             panelNoReviews.Location = new Point(0, 100);
             panelNoReviews.Name = "panelNoReviews";
             panelNoReviews.Padding = new Padding(10);
-            panelNoReviews.Size = new Size(658, 49);
+            panelNoReviews.Size = new Size(673, 49);
             panelNoReviews.TabIndex = 4;
             // 
             // panel13
@@ -169,7 +171,7 @@
             panel6.Location = new Point(0, 51);
             panel6.Name = "panel6";
             panel6.Padding = new Padding(10);
-            panel6.Size = new Size(658, 49);
+            panel6.Size = new Size(673, 49);
             panel6.TabIndex = 2;
             // 
             // panel10
@@ -197,6 +199,7 @@
             customButton3.TabIndex = 1;
             customButton3.Text = "create review";
             customButton3.UseVisualStyleBackColor = false;
+            customButton3.Click += customButton3_Click;
             // 
             // label5
             // 
@@ -215,7 +218,7 @@
             panel5.Dock = DockStyle.Top;
             panel5.Location = new Point(0, 0);
             panel5.Name = "panel5";
-            panel5.Size = new Size(658, 51);
+            panel5.Size = new Size(673, 51);
             panel5.TabIndex = 1;
             // 
             // label2
@@ -235,7 +238,7 @@
             panel18.Dock = DockStyle.Top;
             panel18.Location = new Point(15, 386);
             panel18.Name = "panel18";
-            panel18.Size = new Size(658, 130);
+            panel18.Size = new Size(673, 130);
             panel18.TabIndex = 1;
             // 
             // panel19
@@ -245,7 +248,7 @@
             panel19.Location = new Point(0, 0);
             panel19.Name = "panel19";
             panel19.Padding = new Padding(10);
-            panel19.Size = new Size(575, 130);
+            panel19.Size = new Size(629, 130);
             panel19.TabIndex = 0;
             // 
             // textBox2
@@ -260,7 +263,7 @@
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
             textBox2.ScrollBars = ScrollBars.Vertical;
-            textBox2.Size = new Size(555, 110);
+            textBox2.Size = new Size(609, 110);
             textBox2.TabIndex = 12;
             textBox2.Text = "Film full description";
             // 
@@ -270,7 +273,7 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(15, 15);
             panel2.Name = "panel2";
-            panel2.Size = new Size(658, 371);
+            panel2.Size = new Size(673, 371);
             panel2.TabIndex = 0;
             // 
             // panel3
@@ -286,16 +289,50 @@
             // 
             // panel9
             // 
+            panel9.Controls.Add(label3);
+            panel9.Controls.Add(ratingControl1);
+            panel9.Controls.Add(panel12);
             panel9.Controls.Add(tableLayoutPanel1);
             panel9.Controls.Add(panel22);
             panel9.Controls.Add(panel21);
             panel9.Controls.Add(panel20);
             panel9.Controls.Add(panel11);
-            panel9.Dock = DockStyle.Left;
+            panel9.Dock = DockStyle.Fill;
             panel9.Location = new Point(250, 29);
             panel9.Name = "panel9";
-            panel9.Size = new Size(325, 342);
+            panel9.Size = new Size(379, 342);
             panel9.TabIndex = 2;
+            // 
+            // label3
+            // 
+            label3.Dock = DockStyle.Fill;
+            label3.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(0, 210);
+            label3.Name = "label3";
+            label3.Size = new Size(247, 46);
+            label3.TabIndex = 8;
+            label3.Text = "4.5/5";
+            label3.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // ratingControl1
+            // 
+            ratingControl1.BackColor = Color.White;
+            ratingControl1.CurrentReting = 4;
+            ratingControl1.Dock = DockStyle.Right;
+            ratingControl1.Editable = false;
+            ratingControl1.Location = new Point(247, 210);
+            ratingControl1.Margin = new Padding(0);
+            ratingControl1.Name = "ratingControl1";
+            ratingControl1.Size = new Size(132, 46);
+            ratingControl1.TabIndex = 12;
+            // 
+            // panel12
+            // 
+            panel12.Dock = DockStyle.Top;
+            panel12.Location = new Point(0, 175);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(379, 35);
+            panel12.TabIndex = 13;
             // 
             // tableLayoutPanel1
             // 
@@ -306,11 +343,11 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanel1.Controls.Add(panel23, 1, 0);
             tableLayoutPanel1.Dock = DockStyle.Bottom;
-            tableLayoutPanel1.Location = new Point(0, 253);
+            tableLayoutPanel1.Location = new Point(0, 256);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(325, 89);
+            tableLayoutPanel1.Size = new Size(379, 86);
             tableLayoutPanel1.TabIndex = 12;
             // 
             // panel23
@@ -318,11 +355,11 @@
             panel23.Controls.Add(customButton2);
             panel23.Controls.Add(label12);
             panel23.Dock = DockStyle.Fill;
-            panel23.Location = new Point(102, 3);
+            panel23.Location = new Point(129, 3);
             panel23.MaximumSize = new Size(120, 100);
             panel23.Name = "panel23";
             panel23.Padding = new Padding(10);
-            panel23.Size = new Size(120, 83);
+            panel23.Size = new Size(120, 80);
             panel23.TabIndex = 13;
             // 
             // customButton2
@@ -340,6 +377,7 @@
             customButton2.TabIndex = 2;
             customButton2.Text = "buy";
             customButton2.UseVisualStyleBackColor = false;
+            customButton2.Click += customButton2_Click;
             // 
             // label12
             // 
@@ -359,7 +397,7 @@
             panel22.Dock = DockStyle.Top;
             panel22.Location = new Point(0, 140);
             panel22.Name = "panel22";
-            panel22.Size = new Size(325, 35);
+            panel22.Size = new Size(379, 35);
             panel22.TabIndex = 11;
             // 
             // label10
@@ -369,7 +407,7 @@
             label10.ForeColor = Color.FromArgb(64, 64, 64);
             label10.Location = new Point(0, 0);
             label10.Name = "label10";
-            label10.Size = new Size(175, 35);
+            label10.Size = new Size(229, 35);
             label10.TabIndex = 7;
             label10.Text = "Age rating";
             // 
@@ -377,7 +415,7 @@
             // 
             label11.Dock = DockStyle.Right;
             label11.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(175, 0);
+            label11.Location = new Point(229, 0);
             label11.Name = "label11";
             label11.Size = new Size(150, 35);
             label11.TabIndex = 8;
@@ -390,7 +428,7 @@
             panel21.Dock = DockStyle.Top;
             panel21.Location = new Point(0, 105);
             panel21.Name = "panel21";
-            panel21.Size = new Size(325, 35);
+            panel21.Size = new Size(379, 35);
             panel21.TabIndex = 10;
             // 
             // label8
@@ -400,7 +438,7 @@
             label8.ForeColor = Color.FromArgb(64, 64, 64);
             label8.Location = new Point(0, 0);
             label8.Name = "label8";
-            label8.Size = new Size(175, 35);
+            label8.Size = new Size(229, 35);
             label8.TabIndex = 7;
             label8.Text = "Release date";
             // 
@@ -408,7 +446,7 @@
             // 
             label9.Dock = DockStyle.Right;
             label9.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(175, 0);
+            label9.Location = new Point(229, 0);
             label9.Name = "label9";
             label9.Size = new Size(150, 35);
             label9.TabIndex = 8;
@@ -421,7 +459,7 @@
             panel20.Dock = DockStyle.Top;
             panel20.Location = new Point(0, 70);
             panel20.Name = "panel20";
-            panel20.Size = new Size(325, 35);
+            panel20.Size = new Size(379, 35);
             panel20.TabIndex = 9;
             // 
             // label4
@@ -431,7 +469,7 @@
             label4.ForeColor = Color.FromArgb(64, 64, 64);
             label4.Location = new Point(0, 0);
             label4.Name = "label4";
-            label4.Size = new Size(175, 35);
+            label4.Size = new Size(229, 35);
             label4.TabIndex = 7;
             label4.Text = "Genre";
             // 
@@ -439,7 +477,7 @@
             // 
             label7.Dock = DockStyle.Right;
             label7.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(175, 0);
+            label7.Location = new Point(229, 0);
             label7.Name = "label7";
             label7.Size = new Size(150, 35);
             label7.TabIndex = 8;
@@ -448,35 +486,23 @@
             // panel11
             // 
             panel11.Controls.Add(label1);
-            panel11.Controls.Add(label3);
             panel11.Dock = DockStyle.Top;
             panel11.Location = new Point(0, 0);
             panel11.Name = "panel11";
-            panel11.Size = new Size(325, 70);
+            panel11.Size = new Size(379, 70);
             panel11.TabIndex = 8;
             // 
             // label1
             // 
-            label1.Dock = DockStyle.Fill;
+            label1.Dock = DockStyle.Left;
             label1.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
             label1.Padding = new Padding(15, 5, 15, 0);
-            label1.Size = new Size(263, 70);
+            label1.Size = new Size(312, 70);
             label1.TabIndex = 7;
             label1.Text = "FilmName";
             label1.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label3
-            // 
-            label3.Dock = DockStyle.Right;
-            label3.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(263, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(62, 70);
-            label3.TabIndex = 8;
-            label3.Text = "4.5/5";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel8
             // 
@@ -551,6 +577,7 @@
             buttonEditFilm.TabIndex = 3;
             buttonEditFilm.Text = "Edit film";
             buttonEditFilm.UseVisualStyleBackColor = false;
+            buttonEditFilm.Click += buttonEditFilm_Click;
             // 
             // customButton1
             // 
@@ -578,7 +605,7 @@
             BackColor = Color.White;
             Controls.Add(panel1);
             Name = "FilmPage";
-            Size = new Size(688, 1136);
+            Size = new Size(688, 834);
             Load += FilmPage_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -655,5 +682,7 @@
         private Panel panelNoReviews;
         private Panel panel13;
         private components.Label label6;
+        private components.ui.RatingControl ratingControl1;
+        private Panel panel12;
     }
 }

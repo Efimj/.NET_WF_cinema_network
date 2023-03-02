@@ -1,6 +1,4 @@
-﻿using CPProject.GlobalStates;
-using CPProject.types;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,20 +10,16 @@ using System.Windows.Forms;
 
 namespace CPProject.Controls.Pages
 {
-    public partial class CreateFilmPage : UserControl
+    public partial class CreateSessionPage : UserControl
     {
-        public CreateFilmPage()
+        public CreateSessionPage()
         {
             InitializeComponent();
-            Dock = DockStyle.Fill;
-        }
-        private void buttonBack_Click(object sender, EventArgs e)
-        {
-            goBack();
         }
 
-        private void CreateFilmPage_Load(object sender, EventArgs e)
+        private void customButton1_Click(object sender, EventArgs e)
         {
+            goBack();
         }
 
         private void goBack()

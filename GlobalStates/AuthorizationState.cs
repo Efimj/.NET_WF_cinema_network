@@ -37,13 +37,25 @@ namespace CPProject.GlobalStates
         }
         public void subscribeOnChange(UserTypeChange subscribeEvent)
         {
-            OnChangeUserType += subscribeEvent;
+            //OnChangeUserType += subscribeEvent;
+        }
+        public void unsubscribeOnChange(UserTypeChange sevent)
+        {
+                OnChangeUserType -= sevent;
         }
         public UserTypeChange subscribe
         {
             set
             {
-                OnChangeUserType += value;
+                //OnChangeUserType += value;
+            }
+            get { return OnChangeUserType; }
+        }
+        public UserTypeChange unsubscribe
+        {
+            set
+            {
+                OnChangeUserType -= value;
             }
             get { return OnChangeUserType; }
         }

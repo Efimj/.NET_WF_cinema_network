@@ -29,12 +29,43 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilmCard));
-            pictureBoxFilmPoster = new PictureBox();
-            labelFilmDescription = new System.Windows.Forms.Label();
-            labelFilmRaiting = new System.Windows.Forms.Label();
             labelFilmName = new System.Windows.Forms.Label();
+            labelFilmDescription = new System.Windows.Forms.Label();
+            pictureBoxFilmPoster = new PictureBox();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            ratingControl1 = new ui.RatingControl();
             ((System.ComponentModel.ISupportInitialize)pictureBoxFilmPoster).BeginInit();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
+            // 
+            // labelFilmName
+            // 
+            labelFilmName.BackColor = Color.White;
+            labelFilmName.Dock = DockStyle.Top;
+            labelFilmName.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            labelFilmName.Location = new Point(0, 0);
+            labelFilmName.Name = "labelFilmName";
+            labelFilmName.Padding = new Padding(8, 0, 0, 0);
+            labelFilmName.Size = new Size(258, 30);
+            labelFilmName.TabIndex = 3;
+            labelFilmName.Text = "FilmName";
+            labelFilmName.TextAlign = ContentAlignment.BottomLeft;
+            labelFilmName.Click += labelFilmName_Click;
+            // 
+            // labelFilmDescription
+            // 
+            labelFilmDescription.BackColor = Color.White;
+            labelFilmDescription.Dock = DockStyle.Bottom;
+            labelFilmDescription.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            labelFilmDescription.Location = new Point(0, 286);
+            labelFilmDescription.Name = "labelFilmDescription";
+            labelFilmDescription.Padding = new Padding(5);
+            labelFilmDescription.Size = new Size(258, 80);
+            labelFilmDescription.TabIndex = 1;
+            labelFilmDescription.Text = "Description";
+            labelFilmDescription.Click += labelFilmDescription_Click;
             // 
             // pictureBoxFilmPoster
             // 
@@ -44,59 +75,51 @@
             pictureBoxFilmPoster.Image = (Image)resources.GetObject("pictureBoxFilmPoster.Image");
             pictureBoxFilmPoster.Location = new Point(0, 0);
             pictureBoxFilmPoster.Name = "pictureBoxFilmPoster";
-            pictureBoxFilmPoster.Size = new Size(258, 247);
+            pictureBoxFilmPoster.Size = new Size(258, 225);
             pictureBoxFilmPoster.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxFilmPoster.TabIndex = 0;
             pictureBoxFilmPoster.TabStop = false;
             pictureBoxFilmPoster.Click += pictureBoxFilmPoster_Click;
             // 
-            // labelFilmDescription
+            // panel1
             // 
-            labelFilmDescription.BackColor = Color.White;
-            labelFilmDescription.Dock = DockStyle.Bottom;
-            labelFilmDescription.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            labelFilmDescription.Location = new Point(0, 288);
-            labelFilmDescription.Name = "labelFilmDescription";
-            labelFilmDescription.Padding = new Padding(5, 0, 5, 5);
-            labelFilmDescription.Size = new Size(258, 78);
-            labelFilmDescription.TabIndex = 1;
-            labelFilmDescription.Text = "Description";
-            labelFilmDescription.Click += labelFilmDescription_Click;
+            panel1.Controls.Add(panel2);
+            panel1.Controls.Add(labelFilmName);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 225);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(258, 61);
+            panel1.TabIndex = 4;
             // 
-            // labelFilmRaiting
+            // panel2
             // 
-            labelFilmRaiting.BackColor = Color.White;
-            labelFilmRaiting.Dock = DockStyle.Right;
-            labelFilmRaiting.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelFilmRaiting.Location = new Point(220, 247);
-            labelFilmRaiting.Name = "labelFilmRaiting";
-            labelFilmRaiting.Size = new Size(38, 41);
-            labelFilmRaiting.TabIndex = 2;
-            labelFilmRaiting.Text = "5/5";
-            labelFilmRaiting.TextAlign = ContentAlignment.MiddleCenter;
-            labelFilmRaiting.Click += labelFilmRaiting_Click;
+            panel2.BackColor = Color.White;
+            panel2.Controls.Add(ratingControl1);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 30);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(258, 31);
+            panel2.TabIndex = 4;
             // 
-            // labelFilmName
+            // ratingControl1
             // 
-            labelFilmName.BackColor = Color.White;
-            labelFilmName.Dock = DockStyle.Fill;
-            labelFilmName.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelFilmName.Location = new Point(0, 247);
-            labelFilmName.Name = "labelFilmName";
-            labelFilmName.Padding = new Padding(8, 0, 0, 0);
-            labelFilmName.Size = new Size(220, 41);
-            labelFilmName.TabIndex = 3;
-            labelFilmName.Text = "FilmName";
-            labelFilmName.TextAlign = ContentAlignment.MiddleLeft;
-            labelFilmName.Click += labelFilmName_Click;
+            ratingControl1.BackColor = Color.White;
+            ratingControl1.CurrentReting = 4;
+            ratingControl1.Dock = DockStyle.Right;
+            ratingControl1.Editable = false;
+            ratingControl1.Location = new Point(120, 0);
+            ratingControl1.Margin = new Padding(0);
+            ratingControl1.Name = "ratingControl1";
+            ratingControl1.Padding = new Padding(0, 0, 10, 0);
+            ratingControl1.Size = new Size(138, 31);
+            ratingControl1.TabIndex = 0;
             // 
             // FilmCard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BorderStyle = BorderStyle.FixedSingle;
-            Controls.Add(labelFilmName);
-            Controls.Add(labelFilmRaiting);
+            Controls.Add(panel1);
             Controls.Add(labelFilmDescription);
             Controls.Add(pictureBoxFilmPoster);
             Cursor = Cursors.Hand;
@@ -104,14 +127,18 @@
             Size = new Size(258, 366);
             MouseClick += FilmCard_MouseClick;
             ((System.ComponentModel.ISupportInitialize)pictureBoxFilmPoster).EndInit();
+            panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private PictureBox pictureBoxFilmPoster;
-        private System.Windows.Forms.Label labelFilmDescription;
-        private System.Windows.Forms.Label labelFilmRaiting;
         private System.Windows.Forms.Label labelFilmName;
+        private System.Windows.Forms.Label labelFilmDescription;
+        private PictureBox pictureBoxFilmPoster;
+        private Panel panel1;
+        private Panel panel2;
+        private ui.RatingControl ratingControl1;
     }
 }

@@ -15,14 +15,11 @@ namespace CPProject.Controls.Pages
 {
     public partial class FilmPage : UserControl
     {
-        public FilmPage(Action goBack)
+        public FilmPage()
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill;
-            this.goBack = goBack;
         }
-
-        private Action goBack;
 
         private void FilmPage_Load(object sender, EventArgs e)
         {
@@ -52,8 +49,47 @@ namespace CPProject.Controls.Pages
 
         private void customButton1_Click(object sender, EventArgs e)
         {
-            goBack?.Invoke();
+            goBack();
+        }
+
+        private void goBack()
+        {
+            this.Hide();
+            Panel? parentPanel = (Panel?)this.Parent;
+            if (parentPanel != null)
+            {
+                parentPanel.Controls.RemoveAt(parentPanel.Controls.Count - 1);
+                parentPanel.Controls[parentPanel.Controls.Count - 1].Show();
+            }
             this.DestroyHandle();
+        }
+        private void setNewPage(UserControl page)
+        {
+            this.Hide();
+            Panel? parentPanel = (Panel?)this.Parent;
+            if (parentPanel != null)
+            {
+                CreateReview createFilmPage = new CreateReview();
+                parentPanel.Controls.Add(page);
+            }
+        }
+
+        private void customButton3_Click(object sender, EventArgs e)
+        {
+            CreateReview createReview = new CreateReview();
+            setNewPage(createReview);
+        }
+
+        private void buttonEditFilm_Click(object sender, EventArgs e)
+        {
+            CreateFilmPage createFilmPage = new CreateFilmPage();
+            setNewPage(createFilmPage);
+        }
+
+        private void customButton2_Click(object sender, EventArgs e)
+        {
+            TicketPurchasePage ticketPurchasePage = new TicketPurchasePage();
+            setNewPage(ticketPurchasePage);
         }
     }
 }
