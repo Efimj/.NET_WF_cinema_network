@@ -95,59 +95,56 @@ namespace CPProject.components.ui
 
         private void handleFiveRating()
         {
-            System.Reflection.Assembly myAssembly = System.Reflection.Assembly.GetExecutingAssembly();
-            Stream myStream = myAssembly.GetManifestResourceStream("CPProject.images.namestar_filled.png");
-            Image image = Image.FromStream(myStream);
-            pictureBox1.Image = image;
-            pictureBox2.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_filled.png");
-            pictureBox3.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_filled.png");
-            pictureBox4.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_filled.png");
-            pictureBox5.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_filled.png");
+            pictureBox1.Image = Properties.Resources.star_filled;
+            pictureBox2.Image = Properties.Resources.star_filled;
+            pictureBox3.Image = Properties.Resources.star_filled;
+            pictureBox4.Image = Properties.Resources.star_filled;
+            pictureBox5.Image = Properties.Resources.star_filled;
         }
 
         private void handleFourRating()
         {
-            pictureBox1.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_filled.png");
-            pictureBox2.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_filled.png");
-            pictureBox3.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_filled.png");
-            pictureBox4.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_filled.png");
-            pictureBox5.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_outfilled.png");
+            pictureBox1.Image = Properties.Resources.star_filled;
+            pictureBox2.Image = Properties.Resources.star_filled;
+            pictureBox3.Image = Properties.Resources.star_filled;
+            pictureBox4.Image = Properties.Resources.star_filled;
+            pictureBox5.Image = Properties.Resources.star_outfilled;
         }
 
         private void handleThreeRating()
         {
-            pictureBox1.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_filled.png");
-            pictureBox2.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_filled.png");
-            pictureBox3.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_filled.png");
-            pictureBox4.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_outfilled.png");
-            pictureBox5.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_outfilled.png");
+            pictureBox1.Image = Properties.Resources.star_filled;
+            pictureBox2.Image = Properties.Resources.star_filled;
+            pictureBox3.Image = Properties.Resources.star_filled;
+            pictureBox4.Image = Properties.Resources.star_outfilled;
+            pictureBox5.Image = Properties.Resources.star_outfilled;
         }
 
         private void handleTwoRating()
         {
-            pictureBox1.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_filled.png");
-            pictureBox2.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_filled.png");
-            pictureBox3.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_outfilled.png");
-            pictureBox4.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_outfilled.png");
-            pictureBox5.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_outfilled.png");
+            pictureBox1.Image = Properties.Resources.star_filled;
+            pictureBox2.Image = Properties.Resources.star_filled;
+            pictureBox3.Image = Properties.Resources.star_outfilled;
+            pictureBox4.Image = Properties.Resources.star_outfilled;
+            pictureBox5.Image = Properties.Resources.star_outfilled;
         }
 
         private void handleOneRating()
         {
-            pictureBox1.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_filled.png");
-            pictureBox2.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_outfilled.png");
-            pictureBox3.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_outfilled.png");
-            pictureBox4.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_outfilled.png");
-            pictureBox5.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_outfilled.png");
+            pictureBox1.Image = Properties.Resources.star_filled;
+            pictureBox2.Image = Properties.Resources.star_outfilled;
+            pictureBox3.Image = Properties.Resources.star_outfilled;
+            pictureBox4.Image = Properties.Resources.star_outfilled;
+            pictureBox5.Image = Properties.Resources.star_outfilled;
         }
 
         private void handleNullRating()
         {
-            pictureBox1.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_outfilled.png");
-            pictureBox2.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_outfilled.png");
-            pictureBox3.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_outfilled.png");
-            pictureBox4.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_outfilled.png");
-            pictureBox5.Image = Image.FromFile("D:\\Course 2\\Semestr 2\\ООП КП\\CP project\\CPProject\\images\\star_outfilled.png");
+            pictureBox1.Image = Properties.Resources.star_outfilled;
+            pictureBox2.Image = Properties.Resources.star_outfilled;
+            pictureBox3.Image = Properties.Resources.star_outfilled;
+            pictureBox4.Image = Properties.Resources.star_outfilled;
+            pictureBox5.Image = Properties.Resources.star_outfilled;
         }
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)

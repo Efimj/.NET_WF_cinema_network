@@ -28,7 +28,7 @@ namespace CPProject.Controls.Pages
             for (int i = 0; i < 5; i++)
             {
                 customDataGridView1.Rows.Add(
-                Image.FromFile(@"D:\Course 2\Semestr 2\ООП КП\CP project\CPProject\images\spase1.jpg"),
+                Properties.Resources.spase3,
                 "Pleasantville",
                 DateTime.Now.ToString(),
                 "123 Oak Street, Springfield, IL 62704",
@@ -36,7 +36,7 @@ namespace CPProject.Controls.Pages
                 "12 usd"
                 );
                 customDataGridView1.Rows.Add(
-                Image.FromFile(@"D:\Course 2\Semestr 2\ООП КП\CP project\CPProject\images\spase2.jpg"),
+                Properties.Resources.spase1,
                 "When a young.",
                 DateTime.Now.ToString(),
                 "456 Elm Avenue, Pleasantville, OH 44134",
@@ -44,7 +44,7 @@ namespace CPProject.Controls.Pages
                 "15 usd"
                 );
                 customDataGridView1.Rows.Add(
-                Image.FromFile(@"D:\Course 2\Semestr 2\ООП КП\CP project\CPProject\images\spase3.jpg"),
+                Properties.Resources.spase1,
                 "The Lost Key",
                 DateTime.Now.ToString(),
                 "345 Pineapple Boulevard, Honolulu, HI 96815",

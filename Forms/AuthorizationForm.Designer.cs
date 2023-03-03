@@ -193,7 +193,7 @@
             // 
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.ErrorImage = (Image)resources.GetObject("pictureBox1.ErrorImage");
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Image = Properties.Resources.spase1;
             pictureBox1.InitialImage = (Image)resources.GetObject("pictureBox1.InitialImage");
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";

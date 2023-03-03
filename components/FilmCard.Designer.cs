@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilmCard));
             labelFilmName = new System.Windows.Forms.Label();
             labelFilmDescription = new System.Windows.Forms.Label();
             pictureBoxFilmPoster = new PictureBox();
@@ -72,7 +71,7 @@
             pictureBoxFilmPoster.BackColor = Color.White;
             pictureBoxFilmPoster.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBoxFilmPoster.Dock = DockStyle.Top;
-            pictureBoxFilmPoster.Image = (Image)resources.GetObject("pictureBoxFilmPoster.Image");
+            pictureBoxFilmPoster.Image = Properties.Resources.spase3;
             pictureBoxFilmPoster.Location = new Point(0, 0);
             pictureBoxFilmPoster.Name = "pictureBoxFilmPoster";
             pictureBoxFilmPoster.Size = new Size(258, 225);
