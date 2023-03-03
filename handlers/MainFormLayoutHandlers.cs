@@ -1,5 +1,7 @@
 ﻿using CPProject.Controls;
+using CPProject.Controls.NavigationBars;
 using CPProject.GlobalStates;
+using System.Diagnostics;
 
 namespace CPProject.handlers
 {
@@ -19,9 +21,10 @@ namespace CPProject.handlers
             }
             if (AuthorizationState.Instance.UsersType == types.EUsersType.Administrator)
             {
-                //navBarPanel.Controls.Clear();
-                //navBarPanel.Controls.Add(new NBCustomer(pagePanel));
+                navBarPanel.Controls.Clear();
+                navBarPanel.Controls.Add(new NBAdmin(pagePanel));
             }
         }
+        
     }
 }

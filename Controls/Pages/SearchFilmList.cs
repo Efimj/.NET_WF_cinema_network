@@ -17,7 +17,6 @@ namespace CPProject.Controls
         private void SearchFilmList_Load(object sender, EventArgs e)
         {
             createButtonShower(AuthorizationState.Instance.UsersType);
-            AuthorizationState.Instance.subscribeOnChange(createButtonShower);
             customComboBox1.ComboBoxElement.Items.AddRange(new object[] { "none", "descending date", "ascending date", "rating" });
             customComboBox1.ComboBoxElement.SelectedIndex = 0;
             for (int i = 0; i < 20; i++)

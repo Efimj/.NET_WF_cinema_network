@@ -11,11 +11,8 @@ namespace CPProject
         {
             InitializeComponent();
             this.pagePanel = pagePanel;
-            if (pagePanel.Controls.Count < 1 || !(pagePanel.Controls[0] is SearchFilmList))
-            {
-                pagePanel.Controls.Clear();
-                pagePanel.Controls.Add(new SearchFilmList());
-            }
+            pagePanel.Controls.Clear();
+            pagePanel.Controls.Add(new SearchFilmList());
             setButtonActive(buttonFilmPage);
         }
         private Panel pagePanel;

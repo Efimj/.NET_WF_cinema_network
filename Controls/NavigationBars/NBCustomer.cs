@@ -9,11 +9,8 @@ namespace CPProject.Controls
         public NBCustomer(Panel pagePanel)
         {
             InitializeComponent();
-            if (pagePanel.Controls.Count < 1 || !(pagePanel.Controls[0] is SearchFilmList))
-            {
-                pagePanel.Controls.Clear();
-                pagePanel.Controls.Add(new SearchFilmList());
-            }
+            pagePanel.Controls.Clear();
+            pagePanel.Controls.Add(new SearchFilmList());
             this.pagePanel = pagePanel;
             setButtonActive(buttonFilmPage);
         }

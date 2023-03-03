@@ -25,10 +25,6 @@ namespace CPProject.Controls.Pages
         {
             panelNoReviews.Visible = false;
             editPanelVisibleSetMode(AuthorizationState.Instance.UsersType);
-            AuthorizationState.Instance.subscribeOnChange((EUsersType s) =>
-            {
-                editPanelVisibleSetMode(s);
-            });
             for (int i = 0; i < 30; i++)
             {
                 flowLayoutPanelReviews.Controls.Add(new UserReviewItem());
